@@ -1,4 +1,4 @@
-# [Título del trabajo]
+# EscapeROM
 
 Juego basado en un escape room donde el usuario o jugador tendrá que pasar un número de pruebas,
 habitaciones, desafios y niveles, para conseguir llegar al final del la partida.
