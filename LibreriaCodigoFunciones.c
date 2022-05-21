@@ -33,16 +33,6 @@ void instrucciones (int *informacion)
 
 }
 
-void nueva_partida (partida datos[], char nombre_jugador[], int *numero_partidas)
-{
-
-}
-
-void cargar_partida (partida datos[], char nombre_jugador[], int *numero_partidas)
-{
-
-}
-
 int  comprobar_fichero_partidas (partida datos[], int *numero_partidas)
 {
 	FILE * pv ;   //p hay que ponerle nombre correspondiente
@@ -65,4 +55,14 @@ int  comprobar_fichero_partidas (partida datos[], int *numero_partidas)
 
         fclose(pv);
         return 1;
+}
+
+void nueva_partida (partida datos[], char nombre_jugador[], int *numero_partidas)
+{
+
+}
+
+void cargar_partida (partida datos[], char nombre_jugador[], int *numero_partidas)
+{
+
 }
