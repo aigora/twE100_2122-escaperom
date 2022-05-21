@@ -23,6 +23,13 @@ void menu (int *opcion)
 
 void instrucciones (int *informacion)
 {
+	printf("INSTRUCCIONES DEL ESCAPEROM:\n");
+        printf("A lo largo del juego, se le ira mostrando una historia donde usted es el protagonista.\n");
+        printf("Dicha historia esta dividida en 3 partes, en las cuales hay diferentes sucesos, donde usted podra tomar sus propias decisiones.");
+        printf("Para elegir dichos sucesos, solo sera necesario presionar la tecla del numero segun el suceso que quiera que ocurra a continuacion.\n");
+        printf("Como aclaracion del juego, dispones de un tiempo ilimitado para realizar toda la historia.");
+
+        system("PAUSE");
 
 }
 
