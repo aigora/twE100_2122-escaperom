@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-#include "LibreriaCodigoFunciones.h"
+#include "LibreriaFunciones.h"
 #define limite_partidas 100
 
 
@@ -9,23 +9,17 @@ int main()
 {
     int opciones, info;
 
-
-
-/////falta crear los nombres que iran en el main y colocarlos en las llamadas a las funciones
-
     char jugador[100];
 
 
-
-    FILE * pv;  //poner nombre adecuado para las partidas
-    int NP = 0;   //contador numero de partidas
+    FILE *ppartidas;            //poner nombre adecuado para las partidas
+    int NP = 0;             //contador numero de partidas
     partida nombre[limite_partidas];
-
 
 
     printf("WARNING: Para que el juego funcione correctamente se debe crear en tu equipo un fichero / documento de texto llamado NOMBRES_PARTIDAS vacio\n");
 
-    system("PAUSE");
+    system("PAUSE");            //pausa del programa hasta que el usuario pulsa una tecla para continuar
 
 
 
@@ -43,7 +37,6 @@ int main()
                 else
                 {
                     nueva_partida(nombre, jugador, &NP);   //crea una partida nueva
-                    juego();
                 }
                 break;
 
@@ -55,29 +48,29 @@ int main()
 				else
 				{
 					cargar_partida(nombre, jugador, &NP);    //carga una partida creada
-
 				}
-
                 break;
 
             case 3:
-                instrucciones(&info);
+                instrucciones(&info);           //instrucciones
                 break;
 
             case 4:
-                    printf("juego terminado\n");
-                    break;
+                printf("juego terminado\n");            //salir del juego
+                break;
 
             default:
                 printf("Opcion incorrecta\n");
 				break;
         }
+
+        if(opciones == 1 || opciones == 2)          //llamada al juego
+        {
+            juego(jugador);
+        }
+
     }
     while(opciones != 4);
-
-
-
-
 
 
 return 0;
