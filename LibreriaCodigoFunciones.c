@@ -330,7 +330,200 @@ int juego(char nombre_jugador[])
         system("PAUSE");
     }
     while((decision != 1) && (nota1 != 1) );
-	
+//segunda parte
+
+
+
+    do
+    {
+
+        printf("\n");
+
+        printf("La puerta del contenedor se empieza a abrir... Te diriges a toda prisa hacia el exterior temiendo que se vaya a cerrar como si tuviera un temporizador. Al salir te encuentras en la proa de un barco, miras al mar, te encuentras rodeado de tiburones “Como no”, Vuelcas tu vista de vuelta al barco.\n");
+
+        printf("Que haces?\n");
+
+        printf(" Mirar hacia el puente de mando del capitán 1\n Ir al costado izquierdo 2\n Ir al costado derecho 3\n\n");
+
+        printf("\n");
+
+        fflush(stdin);
+
+        scanf("%i", &decision);
+
+        if(decision == 1)  //Mando capitán
+        {
+            printf("Está vacío... Estás solo\n");
+
+        }
+        else if(decision == 2)  //Cost izq
+        {
+            printf("Te encuentras una compuerta\n");
+
+            do
+            {
+                printf("\n");
+
+                printf("¿Que haces?\n");
+
+                printf(" Intentar abrirla 1\n Seguir andando 2\n Volver por donde has venido 3\n");
+
+                fflush(stdin);
+
+                scanf("%i", &decision);
+
+                if (decision == 1)
+                {
+                    printf("No puedes abrirla\n");
+
+                }
+                else if (decision == 2)  //Seguir andando
+                {
+                    printf("sigues andando\n");
+
+                    printf("No encuentras nada interesante por el camino y acabas llegando a la popa del barco. En la popa del barco lo único que te encuentras son unas cajas y el compartimento de un bote salvavidas.\n");
+
+                    do //mirar cajas, bote o volver atrás.
+                    {
+                        printf("Que haces?\n");
+
+                        printf(" Mirar cajas 1\n Mirar compartimento del bote salvavidas 2\n Volver atras 3\n");
+
+                        printf("\n");
+
+                        fflush(stdin);
+
+                        scanf("%i", &decision);
+
+                        if (decision == 1)
+                        {
+                            printf("Son cajas cerradas herméticamente las cuales no puedes abrir \n");
+                        }
+                        else if (decision == 2)
+                        {
+                            printf("Al mirar en el bote salvavidas, no encuentras ningún bote, pero si que encuentras una palanca ¿qué conveniente no? Coges la palanca.\n");
+                            palanca = 1;
+                        }
+                        else if (decision == 3)
+                        {
+                            printf("Vuelves hacia atras\n");
+                        }
+                        else
+                        {
+                            printf("tecla incorrecta\n");
+                        }
+
+                    }
+                    while(decision != 3);
+
+                }
+                else if (decision == 3)
+                {
+                    printf("Vuelves a proa\n");
+                }
+                else
+                {
+                    printf("tecla incorrecta\n");
+                }
+
+            }
+            while(decision != 3);
+
+        }
+        else if(decision == 3)   //Cost Dere
+        {
+            printf("Te encuentras una compuerta oxidada\n");
+
+            do
+            {
+                printf("\n");
+
+                printf("¿Que haces?\n");
+
+                printf(" Intentar abrirla 1\n Seguir andando 2\n Volver por donde has venido 3\n");
+
+                fflush(stdin);
+
+                scanf("%i", &decision);
+
+                if ((decision == 1) && (palanca == 0))
+                {
+                    printf("No puedes abrirla. no tienes nada con que abrirla\n");
+                }
+                else if((decision == 1) && (palanca == 1)) //   DKIFJOESFSFHSJEFESLIFJKEJLSHCSHKCLKSDNCIJSDBCSJKCNLKCNAJHCIOAULJNC
+                {
+                    printf("Has conseguido abrirla con la palanca\n");
+                    break;
+
+                }
+
+                else if (decision == 2)
+                {
+                    printf("sigues andando\n");
+
+                    printf("No encuentras nada interesante por el camino y acabas llegando a la popa del barco. En la popa del barco lo único que te encuentras son unas cajas y el compartimento de un bote salvavidas.\n");
+
+                    do //mirar cajas, bote o volver atrás.
+                    {
+                        printf("Que haces?\n");
+
+                        printf(" Mirar cajas 1\n Mirar compartimento del bote salvavidas 2\n Volver atras 3\n");
+
+                        printf("\n");
+
+                        fflush(stdin);
+
+                        scanf("%i", &decision);
+
+                        if (decision == 1)
+                        {
+                            printf("Son cajas cerradas herméticamente las cuales no puedes abrir \n");
+                        }
+                        else if (decision == 2)
+                        {
+                            printf("Al mirar en el bote salvavidas, no encuentras ningún bote, pero si que encuentras una palanca ¿qué conveniente no? Coges la palanca.\n");
+                            palanca = 1;
+                        }
+                        else if (decision == 3)
+                        {
+                            printf("Vuelves hacia atras\n");
+                        }
+                        else
+                        {
+                            printf("tecla incorrecta\n");
+                        }
+
+                    }
+                    while(decision != 3);
+
+                }
+                else if (decision == 3)
+                {
+                    printf("Vuelves a proa\n");
+                }
+                else
+                {
+                    printf("Tecla incorrecta\n");
+                }
+
+            }
+            while(decision != 3);
+
+        }
+        else
+        {
+            printf("tecla incorrecta\n");
+        }
+
+        if((decision == 1) && (palanca == 1))
+        {
+            control = 1;
+        }
+        system("PAUSE");
+
+    }
+    while ((decision != 4) && (control != 1));
+
 	
 	
 }
