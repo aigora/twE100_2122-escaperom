@@ -765,7 +765,482 @@ int juego(char nombre_jugador[])
 
             nota2 = 1;
         }
-	
+	else if((decision == 2) && (linterna == 1) && (nota2 == 1))
+        {
+            printf("iluminas las escaleras con la linterna y consigues llegar a una puerta. En la luerta hay un panel de lectura de codigo\n");
+
+            do
+            {
+                printf("introducir el codigo?\n");
+
+                printf("si 1\n no 2\n");
+
+                printf("\n");
+
+                fflush(stdin);
+
+                scanf("%i", &decision);
+
+                if(decision == 1)
+                {
+                    printf("introduces el codigo\n");
+
+                    do
+                    {
+                        fflush(stdin);
+
+                        scanf("%i", &codigosecreto);
+
+                        if(codigofinal == codigosecreto)
+                        {
+                            printf("Prueba final:\nNo debe contestar mal mas 3 de las siguientes preguntas para sobrevivir.\n\n");
+
+                            //pregunta 1
+                            printf("¿Cual es el edificio mas alto del mundo actualmente?:\n");
+                            printf("a - Empire State (EEUU)\n");
+                            printf("b - Burj Khalifa (Arabia Saudi)\n");
+                            printf("c - Torre Iberdrola (España)\n");
+
+                            scanf(" %c", &rp);
+
+                            if(rp == 'b')
+                            {
+                                printf("Respuesta correcta!\n\nSiguiente pregunta:\n");
+                            }
+                            else
+                            {
+                                printf("Respuesta incorrecta!\n\nSiguiente pregunta:\n");
+                                error++;
+                            }
+
+                            //pregunta 2
+                            fflush(stdin);
+                            printf("¿Que comida es tradicional de España?:\n");
+                            printf("a - Paella\n");
+                            printf("b - Sushi\n");
+                            printf("c - Hamburguesa\n");
+
+                            scanf(" %c", &rp);
+
+                            if(rp == 'a')
+                            {
+                                printf("Respuesta correcta!\n\nSiguiente pregunta:\n");
+                            }
+                            else
+                            {
+                                printf("Respuesta incorrecta!\n\nSiguiente pregunta:\n");
+                                error++;
+                            }
+
+                            //pregunta 3
+                            fflush(stdin);
+                            printf("¿Que pesa mas?:\n");
+                            printf("a - un kilo de acero\n");
+                            printf("b - un kilo de plumas\n");
+                            printf("c - pesan lo mismo\n");
+
+                            scanf(" %c", &rp);
+
+                            if(rp == 'c')
+                            {
+                                printf("Respuesta correcta!\n\nSiguiente pregunta:\n");
+                            }
+                            else
+                            {
+                                printf("Respuesta incorrecta!\n\nSiguiente pregunta:\n");
+                                error++;
+                            }
+
+                            //pregunta 4
+                            fflush(stdin);
+                            printf("¿Cual es el oceano mas grande del mundo?:\n");
+                            printf("a - Oceano Atlantico\n");
+                            printf("b - Oceano Pacifico\n");
+                            printf("c - Oceano Indico\n");
+
+                            scanf(" %c", &rp);
+
+                            if(rp == 'b')
+                            {
+                                printf("Respuesta correcta!\n\nSiguiente pregunta:\n");
+                            }
+                            else
+                            {
+                                printf("Respuesta incorrecta!\n\nSiguiente pregunta:\n");
+                                error++;
+                            }
+
+                            //pregunta 5
+                            fflush(stdin);
+                            printf("Si 60 es el 100%, ¿cuanto es el 90%?:\n");
+                            printf("a - 50\n");
+                            printf("b - 48\n");
+                            printf("c - 54\n");
+
+                            scanf(" %c", &rp);
+
+                            if(rp == 'c')
+                            {
+                                printf("Respuesta correcta!\n\nSiguiente pregunta:\n");
+                            }
+                            else
+                            {
+                                printf("Respuesta incorrecta!\n\nSiguiente pregunta:\n");
+                                error++;
+                            }
+
+                            //pregunta 6
+                            fflush(stdin);
+                            printf("¿Cual es la ciudad mas grande del mundo?:\n");
+                            printf("a - Tokio (Japon)\n");
+                            printf("b - Nueva York (EEUU)\n");
+                            printf("c - Madrid (España)\n");
+
+                            scanf(" %c", &rp);
+
+                            if(rp == 'a')
+                            {
+                                printf("Respuesta correcta!\n\nSiguiente pregunta:\n");
+                            }
+                            else
+                            {
+                               printf("Respuesta incorrecta!\n\nSiguiente pregunta:\n");
+                               error++;
+                            }
+
+                            //pregunta 7
+                            fflush(stdin);
+                            printf("¿Quien es el autor de la frase: \"pienso, luego existo\"?:\n");
+                            printf("a - Platon\n");
+                            printf("b - Descartes\n");
+                            printf("c - Galileo\n");
+
+                            scanf(" %c", &rp);
+
+                            if(rp == 'b')
+                            {
+                                printf("Respuesta correcta!\n\nSiguiente pregunta:\n");
+                            }
+                            else
+                            {
+                               printf("Respuesta incorrecta!\n\nSiguiente pregunta:\n");
+                               error++;
+                            }
+
+                            //pregunta 8
+                            fflush(stdin);
+                            printf("¿Cuantos decimales tiene el numero pi?:\n");
+                            printf("a - infinitos\n");
+                            printf("b - mil\n");
+                            printf("c - veinte\n");
+
+                            scanf(" %c", &rp);
+
+                            if(rp == 'a')
+                            {
+                                printf("Respuesta correcta!\n\nSiguiente pregunta:\n");
+                            }
+                            else
+                            {
+                               printf("Respuesta incorrecta!\n\nSiguiente pregunta:\n");
+                               error++;
+                            }
+
+                            //pregunta 9
+                            fflush(stdin);
+                            printf("¿cuanto tiempo tarda la la luz del sol en llegar a la tierra?:\n");
+                            printf("a - 10 horas\n");
+                            printf("b - 1 dia\n");
+                            printf("c - 8 minutos\n");
+
+                            scanf(" %c", &rp);
+
+                            if(rp == 'c')
+                            {
+                                printf("Respuesta correcta!\n\nSiguiente pregunta:\n");
+                            }
+                            else
+                            {
+                               printf("Respuesta incorrecta!\n\nSiguiente pregunta:\n");
+                               error++;
+                            }
+
+                            //pregunta 10
+                            fflush(stdin);
+                            printf("¿Cual es la capital de Australia?:\n");
+                            printf("a - Canberra\n");
+                            printf("b - Sydney\n");
+                            printf("c - Perth\n");
+
+                            scanf(" %c", &rp);
+
+                            if(rp =='a')
+                            {
+                                printf("Respuesta correcta!\n\n");
+                            }
+                            else
+                            {
+                               printf("Respuesta incorrecta!\n\n");
+                               error++;
+                            }
+
+                            //Errores y decision final
+                            printf("Has tenido un total de %i errores\n", error);
+
+                            if(error >= 3)
+                            {
+                                printf("Que pena! Tanto esfuerzo para nada! otra vez sera.");
+                                control3 = 1;
+                                decision = 1;
+                            }
+                            else
+                            {
+                                printf("Enhorabuena! Pasaste tu ultima prueba, ya eres libre!");
+                                control2 = 1;
+                                decision = 1;
+                            }
+                        }
+                        else
+                        {
+                            printf("codigo incorrecto");
+                        }
+
+                    }
+                    while(codigosecreto != codigofinal);
+
+                }
+                else if(decision == 2)
+                {
+                    printf("tanto sufrimiento te esta afectando \n");
+
+                    printf("intentas recordar el codigo\n");
+
+                    //numero 1
+                    printf("1º Digito ");
+
+                    do
+                    {
+                        if(numero1==0)
+                        {
+                            printf("(23+100)*0=X\n");
+                        }
+                        else if (numero1==1)
+                        {
+                            printf("19-15-3=X\n");
+                        }
+                        else if (numero1==2)
+                        {
+                            printf("12-(2*5)=X\n");
+                        }
+                        else if (numero1==3)
+                        {
+                            printf("12-(3*3)=X\n");
+                        }
+                        else if (numero1==4)
+                        {
+                            printf("1*3+1=X\n");
+                        }
+                        else if (numero1==5)
+                        {
+                            printf("15/3 + 0=X\n");
+                        }
+                        else if (numero1==6)
+                        {
+                            printf("2*2+2=X\n");
+                        }
+                        else if (numero1==7)
+                        {
+                            printf("12/4 +4=X\n");
+                        }
+                        else if (numero1==8)
+                        {
+                        printf("2+2+2+2=X\n");
+                        }
+                        else if (numero1==9)
+                        {
+                            printf("2+2+3+2=X\n");
+                        }
+                        else
+                        {
+                            printf("Algo ha ido mal");
+                        }
+                    }
+                    while (a != 0);
+
+                    //numero 2
+                    printf("2º Digito ");
+
+                    do
+                    {
+                        if(numero2==0)
+                        {
+                            printf("(23+100)*0=X\n");
+                        }
+                        else if (numero2==1)
+                        {
+                            printf("19-15-3=X\n");
+                        }
+                        else if (numero2==2)
+                        {
+                            printf("12-(2*5)=X\n");
+                        }
+                        else if (numero2==3)
+                        {
+                            printf("12-(3*3)=X\n");
+                        }
+                        else if (numero2==4)
+                        {
+                            printf("1*3+1=X\n");
+                        }
+                        else if (numero2==5)
+                        {
+                            printf("15/3 + 0=X\n");
+                        }
+                        else if (numero2==6)
+                        {
+                            printf("2*2+2=X\n");
+                        }
+                        else if (numero2==7)
+                        {
+                            printf("12/4 +4=X\n");
+                        }
+                        else if (numero2==8)
+                        {
+                            printf("2+2+2+2=X\n");
+                        }
+                        else if (numero2==9)
+                        {
+                            printf("2+2+3+2=X\n");
+                        }
+                        else
+                        {
+                            printf("Algo ha ido mal");
+                        }
+                        }
+                        while (b != 0);
+
+                    //numero 3
+                    printf("3º Digito ");
+                    do
+                    {
+                        if(numero3==0)
+                        {
+                            printf("(23+100)*0=X\n");
+                        }
+                        else if (numero3==1)
+                        {
+                            printf("19-15-3=X\n");
+                        }
+                        else if (numero3==2)
+                        {
+                            printf("12-(2*5)=X\n");
+                        }
+                        else if (numero3==3)
+                        {
+                            printf("12-(3*3)=X\n");
+                        }
+                        else if (numero3==4)
+                        {
+                            printf("1*3+1=X\n");
+                        }
+                        else if (numero3==5)
+                        {
+                            printf("15/3 + 0=X\n");
+                        }
+                        else if (numero3==6)
+                        {
+                            printf("2*2+2=X\n");
+                        }
+                        else if (numero3==7)
+                        {
+                            printf("12/4 +4=X\n");
+                        }
+                        else if (numero3==8)
+                        {
+                            printf("2+2+2+2=X\n");
+                        }
+                        else if (numero3==9)
+                        {
+                            printf("2+2+3+2=X\n");
+                        }
+                        else
+                        {
+                            printf("Algo ha ido mal");
+                        }
+                    }
+                    while (c != 0);
+
+                    //numero4
+                    printf("4º Digito ");
+
+                    do
+                    {
+                        if(numero4==0)
+                        {
+                            printf("(23+100)*0=X\n");
+                        }
+                        else if (numero4==1)
+                        {
+                            printf("19-15-3=X\n");
+                        }
+                        else if (numero4==2)
+                        {
+                            printf("12-(2*5)=X\n");
+                        }
+                        else if (numero4==3)
+                        {
+                            printf("12-(3*3)=X\n");
+                        }
+                        else if (numero4==4)
+                        {
+                            printf("1*3+1=X\n");
+                        }
+                        else if (numero4==5)
+                        {
+                            printf("15/3 + 0=X\n");
+                        }
+                        else if (numero4==6)
+                        {
+                            printf("2*2+2=X\n");
+                        }
+                        else if (numero4==7)
+                        {
+                            printf("12/4 +4=X\n");
+                        }
+                        else if (numero4==8)
+                        {
+                            printf("2+2+2+2=X\n");
+                        }
+                        else if (numero4==9)
+                        {
+                            printf("2+2+3+2=X\n");
+                        }
+                        else
+                        {
+                            printf("Algo ha ido mal");
+                        }
+                    }
+                    while (d != 0);
+                }
+                else
+                {
+                  printf("tecla incorrecta\n");
+                }
+
+            }
+            while(decision != 1);
+            decision = 2;
+        }
+        else if((decision == 2) && (linterna == 0) )
+        {
+            printf("no ves nada, ni siquiera tus esperanzas de salir de ahi, te tropiezas con las escaleras y te caes, mueres\n");
+
+        }
+        else if((decision == 2) && (linterna == 1) && (nota2 == 0))
+        {
+            printf("te mueres\n");
+
+        }
 	
 }
 
