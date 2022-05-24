@@ -1241,7 +1241,151 @@ int juego(char nombre_jugador[])
             printf("te mueres\n");
 
         }
-	
+	else if(decision == 3)
+        {
+            printf("Al subir las escaleras te encuentras en el puente de mando, te fijas bien y encuentras un compartimento y…. ¡UN ESQUELETO! Tirado te encuentras.\n");
+
+            do
+            {
+                printf("¿Que haces?\n");
+
+                printf("Acercarme al esqueleto 1\n Abrir compartimento 2\n Volver atras\n");
+
+                printf("\n");
+
+                fflush(stdin);
+
+                scanf("%i", &decision);
+
+                if(decision == 1)
+                {
+                    printf("Te acercas lentamente y ves que lo único que queda de él es su ropa y su forma esquelética.\n");
+
+                    do
+                    {
+                        printf("¿Que haces?\n");
+
+                        printf("Investigar esqueleto 1\n Dejar el esqueleto y regresar 2\n");
+
+                        printf("\n");
+
+                        fflush(stdin);
+
+                        scanf("%i", &decision);
+
+                        if(decision == 1)
+                        {
+                            printf("Al fijarte ves que el esqueleto es el capitán del barco por su gorra. Al revisar sus bolsillos lentamente tratando de conservar la poca cordura que te queda, encuentras una nota y una linterna recargable.\n");
+
+                            do
+                            {
+                                printf("¿Que haces?\n");
+
+                                printf("Recoger linterna 1\n Leer nota 2\n Salir por donde has venido 3\n");
+
+                                printf("\n");
+
+                                fflush(stdin);
+
+                                scanf("%i", &decision);
+
+                                if(decision == 1)
+                                {
+                                    printf("Enhorabuena %s tienes una linterna espero que sobrevivas\n", nombre_jugador);
+                                    linterna = 1;
+                                }
+                                else if (decision == 2)
+                                {
+                                    printf("La nota dice: No aguanto más nose que hago aquí no puedo salir he golpeado y tratado de abrir las cajas a golpes pero nada funciona , no creo que vaya a continuar, me rindo, si lees esto dile a mi familia que el capitán Lorenzo navega hasta el final.\n");
+                                }
+
+                                else if (decision == 3)
+                                {
+                                    printf("Vuelves por donde has venido");
+                                }
+                                else
+                                {
+                                    printf("Tecla incorrecta\n");
+                                }
+
+                            }while(decision != 3);
+
+                        }
+                        else if (decision == 2)
+                        {
+                            printf("Vuelves hacia atras\n");
+                            break;
+
+                        }
+                        else
+                        {
+                            printf("Tecla incorrecta\n");
+                        }
+
+                    }
+                    while(decision != 2);
+
+                }
+                else if (decision == 2)
+                {
+                    printf("No encuentras nada interesante\n");
+
+                }
+                else if (decision == 3)
+                {
+                    printf("Vuelves hacia atras\n");
+                    break;
+                }
+                else
+                {
+                    printf("Tecla incorrecta\n");
+                }
+
+            }
+            while(decision != 3);
+        }
+        else
+        {
+            printf("tecla incorrecta\n");
+        }
+
+
+        if((decision == 2) && (linterna == 0))
+        {
+            mueres = 1;
+        }
+        if((decision == 2) && (codigosecreto == codigofinal) && (control3 == 1))
+        {
+            mueres = 1;
+        }
+        if((decision == 2) && (linterna == 1) && (nota2 == 0))
+        {
+            mueres = 1;
+        }
+        if((decision == 2) && (codigosecreto == codigofinal) && (control2 == 1))
+        {
+            vives = 1;
+        }
+
+
+
+        system("PAUSE");
+    }
+    while((decision != 2) ||  ((decision != 2) && (mueres != 1)) ||  ((decision != 2) && (vives != 1)) );
+
+    if(mueres == 1)
+    {
+        printf("Felicidades has acabado el juego con exito!\n");
+        printf("...desde luego no de la mejor manera pero lo has conseguido\n");
+    }
+    if(vives == 1)
+    {
+        printf("Felicidades has acabado el juego con exito!\n");
+        printf("ahora te toca ir a buscar al responsable te haya metido en ese sitio en plan pelicula de venganzas o algo\n");
+    }
+
+    system("PAUSE");
+
+
+return 0;
 }
-
-
