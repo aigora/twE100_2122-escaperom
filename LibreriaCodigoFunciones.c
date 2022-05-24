@@ -523,7 +523,248 @@ int juego(char nombre_jugador[])
 
     }
     while ((decision != 4) && (control != 1));
+//tercera parte
 
+
+    do
+    {
+        printf("Entras al barco.\n");
+
+        printf("Finalmente abriéndote paso tras abrir la compuerta oxidada la cual se cierra según vas pasando. Al avanzar te encuentras una trifurcación:\n");
+
+        printf("A la izquierda es un pasillo iluminado\n");
+
+        printf("A la derecha otro pasillo pero ves que hay unas escaleras que dirigen hacia arriba.\n");
+
+        printf("Y si continuas unas escaleras que se notan que van hacia abajo pero estas se van sumiendo la oscuridad.\n");
+
+        printf("Que haces?\n");
+
+        printf(" Ir hacia la izquierda 1\n Ir hacia abajo 2\n Pasillo de la derecha 3\n");
+
+        printf("\n");
+
+        fflush(stdin);
+
+        scanf("%i", &decision);
+
+        if(decision == 1)
+        {
+            printf("Avanzas hasta llegar a una especie de bodega, y la cual en su interior hay unas cajas\n");
+
+            printf("decides abrir las cajas y te encuentras con comida en mal estado, deduces que este barco ha estado inactivo mucho tiempo. También te encuentras una nota. la lees\n");
+
+            printf("hay escrito un codigo, te lo guardas\n");
+
+            //numero 1
+            printf("1º Digito ");
+
+            do
+            {
+                if(numero1==0)
+                {
+                    printf("(23+100)*0=X\n");
+                }
+                else if (numero1==1)
+                {
+                    printf("19-15-3=X\n");
+                }
+                else if (numero1==2)
+                {
+                    printf("12-(2*5)=X\n");
+                }
+                else if (numero1==3)
+                {
+                    printf("12-(3*3)=X\n");
+                }
+                else if (numero1==4)
+                {
+                    printf("1*3+1=X\n");
+                }
+                else if (numero1==5)
+                {
+                    printf("15/3 + 0=X\n");
+                }
+                else if (numero1==6)
+                {
+                    printf("2*2+2=X\n");
+                }
+                else if (numero1==7)
+                {
+                    printf("12/4 +4=X\n");
+                }
+                else if (numero1==8)
+                {
+                printf("2+2+2+2=X\n");
+                }
+                else if (numero1==9)
+                {
+                    printf("2+2+3+2=X\n");
+                }
+                else
+                {
+                    printf("Algo ha ido mal");
+                }
+            }
+            while (a != 0);
+
+            //numero 2
+            printf("2º Digito ");
+
+            do
+            {
+                if(numero2==0)
+                {
+                    printf("(23+100)*0=X\n");
+                }
+                else if (numero2==1)
+                {
+                    printf("19-15-3=X\n");
+                }
+                else if (numero2==2)
+                {
+                    printf("12-(2*5)=X\n");
+                }
+                else if (numero2==3)
+                {
+                    printf("12-(3*3)=X\n");
+                }
+                else if (numero2==4)
+                {
+                    printf("1*3+1=X\n");
+                }
+                else if (numero2==5)
+                {
+                    printf("15/3 + 0=X\n");
+                }
+                else if (numero2==6)
+                {
+                    printf("2*2+2=X\n");
+                }
+                else if (numero2==7)
+                {
+                    printf("12/4 +4=X\n");
+                }
+                else if (numero2==8)
+                {
+                    printf("2+2+2+2=X\n");
+                }
+                else if (numero2==9)
+                {
+                    printf("2+2+3+2=X\n");
+                }
+                else
+                {
+                    printf("Algo ha ido mal");
+                }
+                }
+                while (b != 0);
+
+            //numero 3
+            printf("3º Digito ");
+            do
+            {
+                if(numero3==0)
+                {
+                    printf("(23+100)*0=X\n");
+                }
+                else if (numero3==1)
+                {
+                    printf("19-15-3=X\n");
+                }
+                else if (numero3==2)
+                {
+                    printf("12-(2*5)=X\n");
+                }
+                else if (numero3==3)
+                {
+                    printf("12-(3*3)=X\n");
+                }
+                else if (numero3==4)
+                {
+                    printf("1*3+1=X\n");
+                }
+                else if (numero3==5)
+                {
+                    printf("15/3 + 0=X\n");
+                }
+                else if (numero3==6)
+                {
+                    printf("2*2+2=X\n");
+                }
+                else if (numero3==7)
+                {
+                    printf("12/4 +4=X\n");
+                }
+                else if (numero3==8)
+                {
+                    printf("2+2+2+2=X\n");
+                }
+                else if (numero3==9)
+                {
+                    printf("2+2+3+2=X\n");
+                }
+                else
+                {
+                    printf("Algo ha ido mal");
+                }
+            }
+            while (c != 0);
+
+            //numero4
+            printf("4º Digito ");
+
+            do
+            {
+                if(numero4==0)
+                {
+                    printf("(23+100)*0=X\n");
+                }
+                else if (numero4==1)
+                {
+                    printf("19-15-3=X\n");
+                }
+                else if (numero4==2)
+                {
+                    printf("12-(2*5)=X\n");
+                }
+                else if (numero4==3)
+                {
+                    printf("12-(3*3)=X\n");
+                }
+                else if (numero4==4)
+                {
+                    printf("1*3+1=X\n");
+                }
+                else if (numero4==5)
+                {
+                    printf("15/3 + 0=X\n");
+                }
+                else if (numero4==6)
+                {
+                    printf("2*2+2=X\n");
+                }
+                else if (numero4==7)
+                {
+                    printf("12/4 +4=X\n");
+                }
+                else if (numero4==8)
+                {
+                    printf("2+2+2+2=X\n");
+                }
+                else if (numero4==9)
+                {
+                    printf("2+2+3+2=X\n");
+                }
+                else
+                {
+                    printf("Algo ha ido mal");
+                }
+            }
+            while (d != 0);
+
+            nota2 = 1;
+        }
 	
 	
 }
