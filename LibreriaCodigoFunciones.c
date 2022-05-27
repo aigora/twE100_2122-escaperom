@@ -39,7 +39,7 @@ int  comprobar_fichero_partidas (partida datos[], int *numero_partidas)
 	FILE *pleer ;
 	int i=0;
 
-	pleer = fopen("nombredelficheroejemplo.txt", "r");   //para abrir el fichero
+	pleer = fopen("NOMBRES_PARTIDA.txt", "r");   //para abrir el fichero
 
 	if(pleer == NULL)      //comprobacion de que existe el fichero
 	{
