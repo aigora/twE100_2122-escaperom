@@ -8,16 +8,16 @@ void menu (int *opcion)
 {
         setlocale(LC_CTYPE,"spanish");
 	
-	system("cls");  //Borrar la pantalla 
+	system("cls");  //Borrar la pantalla del menu
 	
 	printf("Bienvenido a EscapeROM\n");
 
 	printf("Selecciona una opción:\n");
 
-	printf(" 1\tNueva Partida\n");
-	printf(" 2\tCargar Partida\n");
-	printf(" 3\tIntrucciones\n");
-	printf(" 4\tSalir\n");
+	printf(" Nueva Partida     1\n");
+	printf(" Cargar Partida    2\n");
+	printf(" Intrucciones      3\n");
+	printf(" Salir             4\n");
 
 	fflush(stdin);
 
@@ -50,6 +50,7 @@ int  comprobar_fichero_partidas (partida datos[], int *numero_partidas)
 	if(pleer == NULL)      //comprobacion de que existe el fichero
 	{
 		printf("No se ha podido encontrar el fichero.\n");
+		
 		printf("Comprueba que el nombre del fichero está escrito correctamente.\n");
      	        return 0;
         }
@@ -128,8 +129,10 @@ void cargar_partida (partida datos[], char nombre_jugador[], int *numero_partida
     	do              //introduce el nombre de la partida y
     	{
        		printf("Nombre de la partida:\n");
-       		fflush(stdin);
-        	scanf("%s",nombre_jugador);
+       		
+		fflush(stdin);
+        	
+		scanf("%s",nombre_jugador);
 
         	for(i = 0; i < *numero_partidas; i++)           //comprobamos que el nombre de la partida existe
         	{
@@ -147,7 +150,8 @@ void cargar_partida (partida datos[], char nombre_jugador[], int *numero_partida
         	if(aux == 0)
         	{
                 	printf("Nombre de la partida incorrecto.\n");
-            		printf("Vuelve a introducirlo:\n");
+            		
+			printf("Vuelve a introducirlo:\n");
         	}
         	else
         	{
@@ -185,12 +189,12 @@ int juego(char nombre_jugador[])
     char rp;
 
     //para el código de las pruebas que se realizan en el juego
-    pata= rand () % (4-1+1)  + 1;
-    numero1= rand() % (9-1+1)  + 1;
-    numero2= rand() % 10;
-    numero3= rand() % 10;
-    numero4= rand() % 10;
-    codigofinal= (numero1*1000) + (numero2*100) + (numero3*10) + numero4;
+    pata = rand () % (4-1+1)  + 1;
+    numero1 = rand() % (9-1+1)  + 1;
+    numero2 = rand() % 10;
+    numero3 = rand() % 10;
+    numero4 = rand() % 10;
+    codigofinal = (numero1*1000) + (numero2*100) + (numero3*10) + numero4;
 
 
     //printf(" codigo %i, pata %i.\n", codigofinal, pata);		//trucos
@@ -200,14 +204,20 @@ int juego(char nombre_jugador[])
     printf("\n");
 
     printf("Te despiertas un poco desorientado.\n");
+    
     printf("Observas que, gracias a la luz muy tenue de una bombilla situada en el centro, hay una mesa con una nota, una llave y una estatuilla de la torre eiffel.\n");
+    
     printf("Además, fijandote en las paredes de tu alrededor, te das cuenta de que estás dentro de un contenedor de carga, encerrado.\n");
 	
     do
     { 
         printf("\n¿Qué haces?\n");
 
-        printf(" 1\tLeer nota.\n 2\tCoger llave.\n 3\tInspeccionar estatuilla.\n");
+        printf(" Leer nota.                  1\n");
+	    
+	printf(" Coger llave.                2\n");
+	    
+	printf(" Inspeccionar estatuilla.    3\n");
 
         printf("\n");
 
@@ -230,8 +240,11 @@ int juego(char nombre_jugador[])
                 printf("¿Qué haces?\n");
 		    
 		printf("Revisar parte superior.      1\n");
+		
 		printf("Revisar parte inferior.      2\n");
+		
 		printf("Revisar patas de la mesa.    3\n");
+		
 		printf("Volver atrás.                4\n");
 
                 printf("\n");
@@ -302,7 +315,9 @@ int juego(char nombre_jugador[])
                 printf("\n¿Dónde buscas?\n");
 
                 printf(" Buscar en la mesa.        1\n");
+		
 		printf(" Buscar en las paredes.    2\n");
+		
 		printf(" Volver atras.             3\n");
 
                 printf("\n");
@@ -350,7 +365,9 @@ int juego(char nombre_jugador[])
     printf("\n");
 
     printf("La puerta del contenedor se empieza a abrir...\"¿Estoy salvado?\", piensas.\n");
+    
     printf("Te diriges a toda prisa hacia el exterior temiendo que se vaya a cerrar como si tuviera un temporizador.\n");
+    
     printf("Al salir te encuentras en la proa de un barco, miras al mar, te encuentras rodeado de tiburones \"Como no\", y viendo que las desgracias no terminan, vuelcas tu vista de vuelta al barco.\n");
 	
     do
@@ -359,7 +376,9 @@ int juego(char nombre_jugador[])
         printf("\n¿Qué haces?\n");
 
         printf(" Mirar hacia el puente de mando del capitán.   1\n");
+	
 	printf(" Ir a babor.                                   2\n");
+	
 	printf(" Ir a estribor.                                3\n");
 
         printf("\n");
@@ -384,7 +403,9 @@ int juego(char nombre_jugador[])
                 printf("¿Qué haces?\n");
 
                 printf(" Intentar abrirla.               1\n");
+		
 		printf(" Seguir andando.                 2\n");
+		
 		printf(" Volver por donde has venido.    3\n");
 
                 fflush(stdin);
@@ -406,7 +427,11 @@ int juego(char nombre_jugador[])
                     {
                         printf("\n¿Qué haces?\n");
 
-                        printf(" Mirar cajas\t 1\n Mirar compartimento del bote salvavidas\t 2\n Volver atras\t 3\n");
+                        printf(" Mirar cajas.                                1\n");
+			    
+			printf(" Mirar compartimento del bote salvavidas.    2\n");
+			    
+			printf(" Volver atrás.                               3\n");
 
                         printf("\n");
 
@@ -459,7 +484,11 @@ int juego(char nombre_jugador[])
 
                 printf("¿Qué haces?\n");
 
-                printf(" Intentar abrirla\t 1\n Seguir andando\t 2\n Volver por donde has venido\t 3\n");
+                printf(" Intentar abrirla.              1\n");
+		    
+		printf(" Seguir andando.                2\n");
+		    
+		printf(" Volver por donde has venido.   3\n");
 
                 fflush(stdin);
 
@@ -486,7 +515,11 @@ int juego(char nombre_jugador[])
                     {
                         printf("\n¿Qué haces?\n");
 
-                        printf(" Mirar cajas\t 1\n Mirar compartimento del bote salvavidas\t 2\n Volver atras\t 3\n");
+                        printf(" Mirar cajas.                                1\n");
+			    
+			printf( "Mirar compartimento del bote salvavidas.    2\n");
+			    
+			printf(" Volver atrás.                               3\n");
 
                         printf("\n");
 
@@ -559,7 +592,11 @@ int juego(char nombre_jugador[])
     {
         printf("\n¿Qué haces?\n");
 
-        printf(" Ir hacia la izquierda\t 1\n Ir hacia abajo\t 2\n Pasillo de la derecha\t 3\n");
+        printf(" Ir hacia la izquierda.     1\n");
+	    
+	printf(" Ir hacia abajo.            2\n");
+	    
+	printf(" Pasillo de la derecha.     3\n");
 
         printf("\n");
 
@@ -792,7 +829,7 @@ int juego(char nombre_jugador[])
             {
                 printf("\n¿Quieres introducir el código?\n");
 
-                printf(" si\t 1\n no\t 2\n");
+                printf(" Si.\t 1\n No.\t 2\n");
 
                 printf("\n");
 
@@ -802,7 +839,7 @@ int juego(char nombre_jugador[])
 
                 if(decision == 1)
                 {
-                    printf("Introduce el codigo:\n");
+                    printf("Introduce el código:\n");
 
                     do
                     {
@@ -854,9 +891,9 @@ int juego(char nombre_jugador[])
                             //pregunta 3
                             fflush(stdin);
                             printf("¿Qué pesa más?:\n");
-                            printf("a - un kilo de acero\n");
-                            printf("b - un kilo de plumas\n");
-                            printf("c - pesan lo mismo\n");
+                            printf("a - Un kilo de acero\n");
+                            printf("b - Un kilo de plumas\n");
+                            printf("c - Pesan lo mismo\n");
 
                             scanf(" %c", &rp);
 
@@ -949,9 +986,9 @@ int juego(char nombre_jugador[])
                             //pregunta 8
                             fflush(stdin);
                             printf("¿Cuantos decimales tiene el numero pi?:\n");
-                            printf("a - infinitos\n");
-                            printf("b - mil\n");
-                            printf("c - veinte\n");
+                            printf("a - Infinitos\n");
+                            printf("b - Mil\n");
+                            printf("c - Veinte\n");
 
                             scanf(" %c", &rp);
 
@@ -1014,7 +1051,7 @@ int juego(char nombre_jugador[])
                             }
                             else
                             {
-                                printf("Enhorabuena! No te quejes, que no ha sido para tanto, ¡CRACK!\n");
+                                printf("¡Enhorabuena! Pero no te quejes, que no ha sido para tanto, ¡CRACK!\n");
                                 control2 = 1;
                                 decision = 1;
                             }
@@ -1271,7 +1308,11 @@ int juego(char nombre_jugador[])
             {
                 printf("\n¿Qué haces?\n");
 
-                printf(" Acercarme al esqueleto\t 1\n Abrir compartimento\t 2\n Volver atras\t 3\n");
+                printf(" Acercarme al esqueleto.    1\n");
+		    
+		printf(" Abrir compartimento.       2\n");
+		    
+		printf(" Volver atrás.              3\n");
 
                 printf("\n");
 
@@ -1287,7 +1328,9 @@ int juego(char nombre_jugador[])
                     {
                         printf("\n¿Qué haces?\n");
 
-                        printf(" Investigar esqueleto\t 1\n Dejar el esqueleto y regresar\t 2\n");
+                        printf(" Investigar esqueleto.             1\n");
+			    
+			printf(" Dejar el esqueleto y regresar.    2\n");
 
                         printf("\n");
 
@@ -1303,7 +1346,11 @@ int juego(char nombre_jugador[])
                             {
                                 printf("\n¿Qué haces?\n");
 
-                                printf(" Recoger linterna\t 1\n Leer nota\t 2\n Salir por donde has venido\t 3\n");
+                                printf(" Recoger linterna.              1\n");
+				    
+				printf(" Leer nota.                     2\n");
+				    
+				printf(" Salir por donde has venido.    3\n");
 
                                 printf("\n");
 
