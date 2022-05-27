@@ -74,27 +74,27 @@ void nueva_partida (partida datos[], char nombre_jugador[], int *numero_partidas
 
         for(i = 0; i < *numero_partidas; i++)
         {
-			if(strcmp(nombre_jugador, datos[i].nombre_partida) == 0)
-			{
-				aux = 1;
-				break;
-			}
-            else
-            {
-				aux = 0;
-			}
+		if(strcmp(nombre_jugador, datos[i].nombre_partida) == 0)
+		{
+			aux = 1;
+			break;
 		}
+            	else
+            	{
+			aux = 0;
+		}
+	}
 
         if(aux == 1)
         {
-			printf("el nombre de la partida ya existe, inserte otro nombre\n");
-			system("PAUSE");
-		}
-		else
+		printf("el nombre de la partida ya existe, inserte otro nombre\n");
+		system("PAUSE");
+	}
+	else
         {
-			printf("nombre de la partida guardado correctamente\n");
-			strcpy(datos[*numero_partidas].nombre_partida, nombre_jugador);
-		}
+		printf("nombre de la partida guardado correctamente\n");
+		strcpy(datos[*numero_partidas].nombre_partida, nombre_jugador);
+	}
     }
     while(aux == 1);
 
@@ -185,17 +185,16 @@ int juego(char nombre_jugador[])
     printf(" codigo %i, pata %i.\n", codigofinal, pata);
 
 
+	
+    printf("\n");
+
+    printf("Te despiertas, estás en un contenedor de carga con una luz de una bombilla muy tenue en el centro,dentro del contenedor de carga, el cual está cerrado. En el centro te encuentras una mesa con una nota, una llave y una estatuilla de la torre eiffel.\n");
 
     do
-    {
+    { 
+        printf("\nQue haces?\n");
 
-        printf("\n");
-
-        printf("Te despiertas, estás en un contenedor de carga con una luz de una bombilla muy tenue en el centro,dentro del contenedor de carga, el cual está cerrado. En el centro te encuentras una mesa con una nota, una llave y una estatuilla de la torre eiffel.\n");
-
-        printf("Que haces?\n");
-
-        printf(" Leer nota 1\n Coger llave 2\n Inspeccionar estatuilla 3\n");
+        printf(" Leer nota\t 1\n Coger llave\t 2\n Inspeccionar estatuilla\t 3\n");
 
         printf("\n");
 
@@ -217,7 +216,7 @@ int juego(char nombre_jugador[])
 
                 printf("Que haces?\n");
 
-                printf(" revisar parte isuperior 1\n revisar parte inferior 2\n revisar patas de la mesa 3\n volver atras 4\n");
+                printf(" revisar parte isuperior\t 1\n revisar parte inferior\t 2\n revisar patas de la mesa\t 3\n volver atras\t 4\n");
 
                 printf("\n");
 
@@ -238,27 +237,25 @@ int juego(char nombre_jugador[])
                 else if(decision == 3)
                 {
 
-
                     do
                     {
-
-                        printf("q pata miras\n");
-                        printf("pata 1\n pata 2\n pata 3\n pata 4\n");
-                        fflush(stdin);
-                        scanf("%i", &decision);
+                        printf("\nque pata miras?\n");
+                       
+			printf("pata\t 1\n pata\t 2\n pata\t 3\n pata\t 4\n");
+                        
+			fflush(stdin);
+                       
+			scanf("%i", &decision);
 
                         if(decision == pata)
                         {
                             printf("se activa un interruptor\n");
                             nota1 = 1;
                             decision = 4;
-
                         }
                         else
                         {
                             printf("no hay nada\n");
-
-
                         }
                     }
                     while(nota1 != 1);
@@ -281,14 +278,14 @@ int juego(char nombre_jugador[])
 
         else if(decision == 2)
         {
-            printf("coges la llave y te pones a buscar\n");
+            printf("coges la llave\n");
             llaves = 1;
 
             do
             {
-                printf("\n");
+                printf("\ndonde buscas?\n");
 
-                printf(" buscar en la mesa 1\n buscar en las paredes 2\n volver atras 3\n\n");
+                printf(" buscar en la mesa\t 1\n buscar en las paredes\t 2\n volver atras\t 3\n");
 
                 printf("\n");
 
@@ -307,7 +304,6 @@ int juego(char nombre_jugador[])
                 else if(decision == 3)
                 {
                     printf("vuelves atras\n");
-                    //break;
                 }
                 else
                 {
@@ -329,7 +325,7 @@ int juego(char nombre_jugador[])
         }
         system("PAUSE");
     }
-    while((decision != 1) && (nota1 != 1) );
+    while((decision != 1) && (nota1 != 1));
 //segunda parte
 
 
