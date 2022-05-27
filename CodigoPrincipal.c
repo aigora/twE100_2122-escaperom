@@ -2,13 +2,11 @@
 #include <string.h>
 #include "LibreriaFunciones.h"
 #define limite_partidas 100
-#include <locale.h>
+
 
 
 int main()
 {
-    setlocale(LC_CTYPE,"spanish");
-	
     int opciones, info;
 
     char jugador[100];
@@ -62,7 +60,7 @@ int main()
                 break;
 
             default:
-                printf("Opción incorrecta\n");
+                printf("Opcion incorrecta\n");
 				break;
         }
 
