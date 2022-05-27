@@ -1434,7 +1434,7 @@ int juego(char nombre_jugador[])
     {
         printf("\nFelicidades, has acabado el juego!\n");
         printf("...desde luego no de la mejor manera pero lo has conseguido.\n");
-	printf("Te recomiendo que lo vuelvas a intentar!");
+	printf("Te recomiendo que lo vuelvas a intentar!\n");
     }
     if(vives == 1)
     {
