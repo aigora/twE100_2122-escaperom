@@ -59,8 +59,7 @@ int  comprobar_fichero_partidas (partida datos[], int *numero_partidas)
 }
 
 void nueva_partida (partida datos[], char nombre_jugador[], int *numero_partidas)
-{ //printf("sigue las instrucciones para crear la partida\n");
-
+{ 
     FILE *pescribir; 
     int i, aux = 0;
 
@@ -159,7 +158,7 @@ int juego(char nombre_jugador[])
     srand (time(NULL));
 
     //varables para el juego en general
-    int decision, decisionX;
+    int decision;
     int nota1 = 0, llaves = 0, palanca = 0, linterna = 0, nota2 = 0;
     int control = 0, control2 = 0, control3 = 0;
     int mueres = 0, vives = 0;
@@ -520,22 +519,20 @@ int juego(char nombre_jugador[])
     while ((decision != 4) && (control != 1));
 //tercera parte
 
-
-    do
-    {
         printf("Entras al barco.\n");
 
         printf("Finalmente abriéndote paso tras abrir la compuerta oxidada la cual se cierra según vas pasando. Al avanzar te encuentras una trifurcación:\n");
-
+    do
+    {
         printf("A la izquierda es un pasillo iluminado\n");
 
         printf("A la derecha otro pasillo pero ves que hay unas escaleras que dirigen hacia arriba.\n");
 
         printf("Y si continuas unas escaleras que se notan que van hacia abajo pero estas se van sumiendo la oscuridad.\n");
 
-        printf("Que haces?\n");
+        printf("\nQue haces?\n");
 
-        printf(" Ir hacia la izquierda 1\n Ir hacia abajo 2\n Pasillo de la derecha 3\n");
+        printf(" Ir hacia la izquierda\t 1\n Ir hacia abajo\t 2\n Pasillo de la derecha\t 3\n");
 
         printf("\n");
 
@@ -766,9 +763,9 @@ int juego(char nombre_jugador[])
 
             do
             {
-                printf("introducir el codigo?\n");
+                printf("\nintroducir el codigo?\n");
 
-                printf("si 1\n no 2\n");
+                printf(" si\t 1\n no\t 2\n");
 
                 printf("\n");
 
@@ -1242,9 +1239,9 @@ int juego(char nombre_jugador[])
 
             do
             {
-                printf("¿Que haces?\n");
+                printf("\n¿Que haces?\n");
 
-                printf("Acercarme al esqueleto 1\n Abrir compartimento 2\n Volver atras\n");
+                printf(" Acercarme al esqueleto\t 1\n Abrir compartimento\t 2\n Volver atras\t 3\n");
 
                 printf("\n");
 
@@ -1258,9 +1255,9 @@ int juego(char nombre_jugador[])
 
                     do
                     {
-                        printf("¿Que haces?\n");
+                        printf("\n¿Que haces?\n");
 
-                        printf("Investigar esqueleto 1\n Dejar el esqueleto y regresar 2\n");
+                        printf(" Investigar esqueleto\t 1\n Dejar el esqueleto y regresar\t 2\n");
 
                         printf("\n");
 
@@ -1274,9 +1271,9 @@ int juego(char nombre_jugador[])
 
                             do
                             {
-                                printf("¿Que haces?\n");
+                                printf("\n¿Que haces?\n");
 
-                                printf("Recoger linterna 1\n Leer nota 2\n Salir por donde has venido 3\n");
+                                printf(" Recoger linterna\t 1\n Leer nota\t 2\n Salir por donde has venido\t 3\n");
 
                                 printf("\n");
 
@@ -1370,13 +1367,13 @@ int juego(char nombre_jugador[])
 
     if(mueres == 1)
     {
-        printf("Felicidades has acabado el juego con exito!\n");
+        printf("\nFelicidades has acabado el juego con exito!\n");
         printf("...desde luego no de la mejor manera pero lo has conseguido\n");
     }
     if(vives == 1)
     {
-        printf("Felicidades has acabado el juego con exito!\n");
-        printf("ahora te toca ir a buscar al responsable te haya metido en ese sitio en plan pelicula de venganzas o algo\n");
+        printf("\nFelicidades has acabado el juego con exito!\n");
+        printf("...ahora te toca ir a buscar al responsable te haya metido en ese sitio en plan pelicula de venganzas o algo\n");
     }
 
     system("PAUSE");
