@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-#include "LibreriaFunciones.h"
+#include "LibreriaCodigoFunciones.h"
 #define limite_partidas 100
 
 
