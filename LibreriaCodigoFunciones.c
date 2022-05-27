@@ -181,7 +181,7 @@ int juego(char nombre_jugador[])
     codigofinal= (numero1*1000) + (numero2*100) + (numero3*10) + numero4;
 
 
-    printf(" codigo %i, pata %i.\n", codigofinal, pata);
+    //printf(" codigo %i, pata %i.\n", codigofinal, pata);		//trucos
 
 
 	
