@@ -12,12 +12,12 @@ int main()
     char jugador[100];
 
 
-    FILE *ppartidas;            //poner nombre adecuado para las partidas
+    FILE *ppartidas;           
     int NP = 0;             //contador numero de partidas
     partida nombre[limite_partidas];
 
 
-    printf("WARNING: Para que el juego funcione correctamente se debe crear en tu equipo un fichero / documento de texto llamado NOMBRES_PARTIDAS vacio\n");
+    printf("WARNING: Para que el juego funcione correctamente se debe crear en tu equipo un fichero/documento de texto llamado NOMBRES_PARTIDAS vacio\n");
 
     system("PAUSE");            //pausa del programa hasta que el usuario pulsa una tecla para continuar
 
@@ -42,13 +42,13 @@ int main()
 
             case 2:
                 if(comprobar_fichero_partidas(nombre, &NP) == 0)    //comprueba que exista el fichero con las partidas
-				{
-					return 0;
-				}
-				else
-				{
-					cargar_partida(nombre, jugador, &NP);    //carga una partida creada
-				}
+		{
+			return 0;
+		}
+		else
+		{
+			cargar_partida(nombre, jugador, &NP);    //carga una partida creada
+		}
                 break;
 
             case 3:
@@ -56,7 +56,7 @@ int main()
                 break;
 
             case 4:
-                printf("juego terminado\n");            //salir del juego
+                printf("juego terminado\n");            //salir del programa
                 break;
 
             default:
